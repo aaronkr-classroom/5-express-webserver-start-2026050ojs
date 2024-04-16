@@ -1,4 +1,4 @@
-a// listing 9.3.js (p. 145)
+// listing 9.3.js (p. 145)
 "use strict";
 
 const port = 3000,
@@ -44,6 +44,10 @@ app.get("/", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.send("This is the CONTACT page.");
+});
+
+app.get("/about", (req, res) => {
+  res.send("This is the ABOUT page.");
 });
 
 /**

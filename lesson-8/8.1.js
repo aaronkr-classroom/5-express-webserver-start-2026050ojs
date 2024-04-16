@@ -16,20 +16,14 @@ app
         console.log(req.url);
         console.log(req.query);
 
-        res.send('Hello World!'); // res.send로 서버에서 클라이언트의 응답 발행
+        res.send('<h1>HOME</h1>Hello World!'); // res.send로 서버에서 클라이언트의 응답 발행
     })
-    .listen(port, () => { // 3000번 포트로 애플리케이션 셋업
-        console.log(`Express at https://localhost:$:${port}`);
-    });
-    .get('/about', (req, res) => { // 
-        /**
-         * Listing 8.2 (p. 140)
-         * 요청 매개변수의 액세스
-         */
-        console.log(req.params);
-        console.log(req.body);
+    
+    .get('/about', (req, res) => {
         console.log(req.url);
         console.log(req.query);
-
-        res.send('ABOUT ME!'); // res.send로 서버에서 클라이언트의 응답 발행
+        res.send('<h1>ABOUT</h1>About Me!');
     })
+    .listen(port, () => { // 3000번 포트로 애플리케이션 셋업
+        console.log(`Express at http://localhost: ${port}`);
+    });
